@@ -1,0 +1,89 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered-box {
+    width: 300px;
+    height: 250px;
+    background-color: lightblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #333;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.centered-box p{
+    color: black;
+    font-size: 50px;
+    margin: 0;
+    flex: 0 0 auto;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.text-input {
+    width:80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3, box-shadow 0.3;
+}
+
+.text-input:focus{
+    border-color: #007BFF;
+    background-color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.centered-box button{
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.button-container{
+    display: flex;
+    gap: 10px;
+}
+
+.centered-box button {
+    padding: 10px 20px;
+}
+
+#video{
+    border-color: black;
+    border-radius: 20px;
+    margin-left: 50px;
+
+}
+
+.feedback-message {
+    position: absolute; /* Set position to absolute */
+    top: 100px; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to truly center */
+    margin-bottom: 20px; /* Space below */
+    font-size: 35px;
+    color: green; /* Change color based on feedback */
+    text-align: center;
+    z-index: 10; /* Make sure it's above other elements */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+

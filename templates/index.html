@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementary Math</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+    <div id="feedback" class="feedback-message"></div>
+    <div class="centered-box">
+        <p id = "question">1 + 1 = ?</p>
+        <input type="text" placeholder="Enter your answer here!" class="text-input">
+        <div class="button-container">
+            <button id="new-question">New Question</button>
+            <button id="check-answer">Check Answer</button>
+    </div>
+
+    
+    </div>
+
+    <div id="video">
+        <img src="{{ url_for('video_feed') }}" width="300" height="220">
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
