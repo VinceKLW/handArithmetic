@@ -2,7 +2,7 @@ from flask import Flask, jsonify, render_template, Response
 import cv2
 import HandTrackingModule as htm
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 wCam, hCam = 640, 480
 cap = cv2.VideoCapture(0)

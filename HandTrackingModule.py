@@ -41,40 +41,40 @@ class HandDetector:
         return lmList
 
 
-def main():
-    pTime = 0
-    cap = cv2.VideoCapture(0)
-    detector = HandDetector()
+# def main():
+#     pTime = 0
+#     cap = cv2.VideoCapture(0)
+#     detector = HandDetector()
     
-    if not cap.isOpened():
-        print("Error: Could not open video stream.")
-        return
+#     if not cap.isOpened():
+#         print("Error: Could not open video stream.")
+#         return
 
-    while True:
-        success, img = cap.read()
-        if not success:
-            print("Error: Failed to capture image.")
-            break
+#     while True:
+#         success, img = cap.read()
+#         if not success:
+#             print("Error: Failed to capture image.")
+#             break
 
-        img = detector.findHands(img)
-        lmList = detector.findPosition(img)
-        if lmList:
-            print(lmList[4])
+#         img = detector.findHands(img)
+#         lmList = detector.findPosition(img)
+#         if lmList:
+#             print(lmList[4])
 
-        cTime = time.time()
-        fps = 1 / (cTime - pTime)
-        pTime = cTime
+#         cTime = time.time()
+#         fps = 1 / (cTime - pTime)
+#         pTime = cTime
 
-        cv2.putText(img, f'FPS: {int(fps)}', (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
+#         cv2.putText(img, f'FPS: {int(fps)}', (10, 70), cv2.FONT_HERSHEY_PLAIN, 3, (255, 0, 255), 3)
 
-        cv2.imshow("Image", img)
+#         cv2.imshow("Image", img)
 
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+#         if cv2.waitKey(1) & 0xFF == ord('q'):
+#             break
 
-    cap.release()
-    cv2.destroyAllWindows()
+#     cap.release()
+#     cv2.destroyAllWindows()
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
