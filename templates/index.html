@@ -9,21 +9,24 @@
 </head>
 
 <body>
+    <img class="logo" src="{{ url_for('static', filename='logo.png') }}">
     <div id="feedback" class="feedback-message"></div>
-    <div class="centered-box">
+    <div class="items">
+        <div class="centered-box">
         <p id = "question">1 + 1 = ?</p>
         <input type="text" placeholder="Enter your answer here!" class="text-input">
         <div class="button-container">
             <button id="new-question">New Question</button>
             <button id="check-answer">Check Answer</button>
-    </div>
-
-    
+        </div>
     </div>
 
     <div id="video">
         <img src="{{ url_for('video_feed') }}" width="300" height="220">
     </div>
+    
+    </div>
+
 
 
 

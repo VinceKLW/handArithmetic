@@ -44,6 +44,8 @@ def generate_frames():
                     else:
                         fingers.append(0)  # Thumb is down
 
+                    # [0,0,0,0,0]
+
                     # Check for the other fingers (1 to 4)
                     for id in range(1, 5):
                         if lmList[tipIds[id]][2] < lmList[tipIds[id]-2][2]:
